@@ -1,0 +1,25 @@
+{
+  "model": "yolo26n.pt",
+  "mode": "rgbt",
+  "input_channels": 4,
+  "ultralytics": "8.4.215",
+  "torch": "2.12.1+cu130",
+  "opencv": "5.1.0",
+  "split_manifest_sha256": "088b02a8a23b574a5a5f5900a83a8782080f20b53d48bfef42f2362b318de572",
+  "epochs_completed": 100,
+  "batch": 32,
+  "imgsz": 640,
+  "seed": 42,
+  "device": "0",
+  "map50": 0.8557622385490489,
+  "map50_95": 0.49193249643062853,
+  "precision": 0.8008542515836511,
+  "recall": 0.8166706817634305,
+  "test_speed_ms_per_image": {
+    "preprocess": 0.4534227878431898,
+    "inference": 0.3860726492135744,
+    "loss": 0.000171651652256533,
+    "postprocess": 0.06266506380715399
+  },
+  "weights": "results/weights/best.pt"
+}
