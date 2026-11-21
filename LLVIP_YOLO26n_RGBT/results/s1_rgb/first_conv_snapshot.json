@@ -1,0 +1,11 @@
+{
+  "mode": "rgb",
+  "t_init": "auto",
+  "in_channels": 3,
+  "pretrained_channels": 3,
+  "init_state": {
+    "applied": "auto",
+    "sha_after": "8479f48955213cf7"
+  },
+  "weights_unchanged_since_init": true
+}
