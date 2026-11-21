@@ -20,21 +20,22 @@
 | S3 RGBT | RGB+Thermal | random | **0.9369** | **0.5758** | 0.9252 | 0.8791 |
 | S3' RGBT | RGB+Thermal | RGB mean | 0.9351 | 0.5502 | **0.9573** | **0.8829** |
 
-指标来源于各实验目录中的 `baseline_result.json`；模型权重位于对应目录的 `weights/best.pt`。
+指标来源于各实验目录中的 `baseline_result.json`，对应验证集最佳权重的复评。各组的逐轮指标在 `results.csv`，独立复评的预测在 `val/predictions.json`。
 
 ## 目录说明
 
-- `reproduce/prepare_llvip.py`：建立配对数据、固定划分和 YOLO 数据配置。
-- `reproduce/train_yolo26.py`：执行 RGB、Thermal、随机初始化 RGBT、RGB 均值初始化 RGBT 四组实验。
-- `reproduce/reference_split.csv`：固定划分清单。
-- `results/`：四组训练日志、曲线、验证结果、快照和权重。
+- [数据准备和训练代码](../../code/modality_comparison_30e/) 包含 `prepare_llvip.py`、`train_yolo26.py`、依赖与划分清单。
+- 结果归档分为 [S1 RGB](s1_rgb/)、[S2 Thermal](s2_thermal/)、[S3 RGBT 随机初始化](s3_rgbt_random/) 和 [S3′ RGBT RGB 均值初始化](s3p_rgbt_rgbmean/)。
 
 ## 复现实验
 
-在 `reproduce/` 目录准备好 LLVIP 原始数据后，先执行数据准备：
+进入仓库的 `code/modality_comparison_30e/`，参考 [数据说明](../../datasets/README.md) 准备原始 ZIP，再执行：
 
 ```bash
+python -m pip install -r requirements.txt
+curl -fL -o yolo26n.pt https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo26n.pt
 python prepare_llvip.py --modes rgb thermal rgbt --workers 8
+cmp reference_split.csv data/LLVIP_prepared/split_manifest.csv
 ```
 
 单组训练示例：

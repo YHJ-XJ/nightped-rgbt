@@ -1,1 +1,1 @@
-reproduce/reference_split.csv -text
+code/**/reference_split.csv -text whitespace=cr-at-eol
