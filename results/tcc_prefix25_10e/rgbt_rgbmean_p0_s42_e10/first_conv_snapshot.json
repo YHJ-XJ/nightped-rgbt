@@ -1,0 +1,16 @@
+{
+  "mode": "rgbt",
+  "t_init": "rgbmean",
+  "in_channels": 4,
+  "pretrained_channels": 3,
+  "init_state": {
+    "applied": "rgbmean",
+    "sha_before": "c386ae7f731f04c2",
+    "sha_after": "48227e127d9b1a72"
+  },
+  "weights_unchanged_since_init": true,
+  "fourth_equals_rgb_mean": true,
+  "fourth_vs_mean_max_abs": 5.960464477539063e-08,
+  "fourth_l2": 3.0148589611053467,
+  "rgb_mean_l2": 3.0148589611053467
+}

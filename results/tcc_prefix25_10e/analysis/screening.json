@@ -1,0 +1,9 @@
+{
+  "passed": false,
+  "p2_minus_p0_pp": -0.2190573428025533,
+  "p2_minus_p1_pp": -2.639027216527967,
+  "val_all_delta_pp": -1.8184641767853615,
+  "val_positive_delta_pp": -1.88162338216461,
+  "probe_positive_delta_pp": 2.0375256473880277,
+  "transition": "mechanism_not_supported"
+}

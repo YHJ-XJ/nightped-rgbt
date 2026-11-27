@@ -1,0 +1,96 @@
+{
+  "config": {
+    "arm": "p2",
+    "seed": 42,
+    "epochs": 10,
+    "imgsz": 640,
+    "batch": 32,
+    "hardware": "NVIDIA GeForce RTX 4090",
+    "device": "0",
+    "workers": 8,
+    "thermal_init": "rgbmean",
+    "split_manifest_sha256": "088b02a8a23b574a5a5f5900a83a8782080f20b53d48bfef42f2362b318de572",
+    "holdout_sha256": "5ca389d600198419e7edea73825975722ba0cc30f068602944e9e5898188f1ef",
+    "starting_weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "quality_sha256": "0af913b479e874275f2a2bdd2cb3cade0304cdf485c019b95a2b2f9a7cd45024",
+    "edit_version": 1,
+    "edit_probability": 0.5,
+    "ultralytics": "8.4.215",
+    "torch": "2.12.1+cu130",
+    "opencv": "5.1.0"
+  },
+  "training_recipe": {
+    "optimizer": "AdamW",
+    "lr0": 0.002,
+    "lrf": 0.01,
+    "momentum": 0.9,
+    "weight_decay": 0.0005,
+    "warmup_epochs": 3.0,
+    "warmup_bias_lr": 0.1,
+    "cos_lr": false,
+    "nbs": 64
+  },
+  "completed_epochs": 10,
+  "primary_checkpoint": "last",
+  "best_fitness_epoch": 8,
+  "train_seconds_csv": 599.981,
+  "train_call_wall_seconds": 633.2823009043932,
+  "complexity": {
+    "params": 2534030,
+    "gflops": 6.0568064,
+    "imgsz": 640,
+    "graph": "unfused training model"
+  },
+  "weights": {
+    "last": {
+      "path": "/root/autodl-tmp/LLVIP_TCC_Pilot_2026-11-27/runs/tcc_prefix25_10e/rgbt_rgbmean_p2_s42_e10/weights/last.pt",
+      "size_bytes": 5443333,
+      "sha256": "a52e6b761169b4163e899d3f764ba5e49fde9a1fac08a0fc192045991dc9368a"
+    },
+    "best": {
+      "path": "/root/autodl-tmp/LLVIP_TCC_Pilot_2026-11-27/runs/tcc_prefix25_10e/rgbt_rgbmean_p2_s42_e10/weights/best.pt",
+      "size_bytes": 5443333,
+      "sha256": "251c8bf093191c7d44b05ad59520f3866f6808a90546ac84212cb83366ecb1d3"
+    }
+  },
+  "val": {
+    "map50": 0.927002318024313,
+    "map50_95": 0.5309067358101871,
+    "ap75": 0.5469483976993096,
+    "precision": 0.9470223122338846,
+    "recall": 0.8726017957204334,
+    "speed_ms_per_image": {
+      "preprocess": 0.748888037915947,
+      "inference": 0.4663736218922989,
+      "loss": 0.00024578476042174334,
+      "postprocess": 0.0887752831207273
+    },
+    "predictions": "/root/autodl-tmp/LLVIP_TCC_Pilot_2026-11-27/runs/tcc_prefix25_10e/rgbt_rgbmean_p2_s42_e10/val_last/predictions.json",
+    "predictions_sha256": "57e6351918f61ecf3efcb857aa490f36826cdb51258283144736f56c9ab4cc3d",
+    "checkpoint": {
+      "path": "/root/autodl-tmp/LLVIP_TCC_Pilot_2026-11-27/runs/tcc_prefix25_10e/rgbt_rgbmean_p2_s42_e10/weights/last.pt",
+      "size_bytes": 5443333,
+      "sha256": "a52e6b761169b4163e899d3f764ba5e49fde9a1fac08a0fc192045991dc9368a"
+    }
+  },
+  "probe": {
+    "map50": 0.9592803387640347,
+    "map50_95": 0.5765688677815413,
+    "ap75": 0.5897291964303684,
+    "precision": 0.9466178131576674,
+    "recall": 0.9233671163147456,
+    "speed_ms_per_image": {
+      "preprocess": 0.627248510542209,
+      "inference": 0.48195151502077177,
+      "loss": 0.00022426599870055,
+      "postprocess": 0.08989728758239296
+    },
+    "predictions": "/root/autodl-tmp/LLVIP_TCC_Pilot_2026-11-27/runs/tcc_prefix25_10e/rgbt_rgbmean_p2_s42_e10/probe_last/predictions.json",
+    "predictions_sha256": "abcc224c3073f5ca4f81d4ec1999ccd8d302dac5aa81329dcf3110990b52caed",
+    "checkpoint": {
+      "path": "/root/autodl-tmp/LLVIP_TCC_Pilot_2026-11-27/runs/tcc_prefix25_10e/rgbt_rgbmean_p2_s42_e10/weights/last.pt",
+      "size_bytes": 5443333,
+      "sha256": "a52e6b761169b4163e899d3f764ba5e49fde9a1fac08a0fc192045991dc9368a"
+    }
+  }
+}

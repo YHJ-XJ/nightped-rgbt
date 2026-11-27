@@ -1,2 +1,6 @@
 code/**/reference_split.csv -text whitespace=cr-at-eol
 results/protocol_10e/*/val_*/predictions.json -text
+code/tcc_prefix25_10e/start_tcc.sh text eol=lf
+results/tcc_prefix25_10e/*/*_last/predictions.json -text
+results/tcc_prefix25_10e/holdout_manifest.json -text
+results/tcc_prefix25_10e/quality/quality.json -text
