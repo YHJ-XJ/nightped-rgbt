@@ -1,1 +1,2 @@
 code/**/reference_split.csv -text whitespace=cr-at-eol
+results/protocol_10e/*/val_*/predictions.json -text

@@ -1,0 +1,31 @@
+{
+  "cohort": {
+    "scope": "protocol",
+    "epochs": 10,
+    "imgsz": 640,
+    "batch": 32,
+    "split_manifest_sha256": "088b02a8a23b574a5a5f5900a83a8782080f20b53d48bfef42f2362b318de572",
+    "pretrained_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "device": "0",
+    "hardware": "NVIDIA GeForce RTX 5090",
+    "ultralytics": "8.4.215",
+    "torch": "2.12.1+cu130",
+    "opencv": "5.1.0",
+    "workers": 8,
+    "recipe": {
+      "optimizer": "AdamW",
+      "lr0": 0.002,
+      "lrf": 0.01,
+      "momentum": 0.9,
+      "weight_decay": 0.0005,
+      "warmup_epochs": 3.0,
+      "warmup_bias_lr": 0.1,
+      "cos_lr": false,
+      "nbs": 64
+    }
+  },
+  "matrix_complete": true,
+  "repeat_present": true,
+  "subgroup_ap": "COCO-style, separate from Ultralytics validation metrics",
+  "churn": "negative or near-zero; FPPI 0.10 at IoU 0.5, hit at IoU 0.75"
+}

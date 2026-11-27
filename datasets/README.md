@@ -15,4 +15,4 @@ python prepare_llvip.py --modes rgb thermal rgbt --workers 8
 cmp reference_split.csv data/LLVIP_prepared/split_manifest.csv
 ```
 
-只跑四通道基线时，可在数据准备命令中指定 `--modes rgbt`。两套代码的 `reference_split.csv` 使用同一划分及校验值 `088b02a8a23b574a5a5f5900a83a8782080f20b53d48bfef42f2362b318de572`。
+只跑四通道基线时，可在数据准备命令中指定 `--modes rgbt`。各实验的 `reference_split.csv` 使用同一划分及校验值 `088b02a8a23b574a5a5f5900a83a8782080f20b53d48bfef42f2362b318de572`。10 轮实验可用 [协议数据准备入口](../code/protocol_10e/README.md) 复用已有 TIFF，复评时只读取项目验证集。

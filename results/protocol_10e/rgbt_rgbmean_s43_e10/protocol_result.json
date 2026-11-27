@@ -1,0 +1,86 @@
+{
+  "config": {
+    "arm": "s3p",
+    "mode": "rgbt",
+    "t_init": "rgbmean",
+    "seed": 43,
+    "repeat": false,
+    "epochs": 10,
+    "imgsz": 640,
+    "batch": 32,
+    "workers": 8,
+    "split_manifest_sha256": "088b02a8a23b574a5a5f5900a83a8782080f20b53d48bfef42f2362b318de572",
+    "pretrained_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "device": "0",
+    "hardware": "NVIDIA GeForce RTX 5090",
+    "scope": "protocol",
+    "ultralytics": "8.4.215",
+    "torch": "2.12.1+cu130",
+    "opencv": "5.1.0"
+  },
+  "training_recipe": {
+    "optimizer": "AdamW",
+    "lr0": 0.002,
+    "lrf": 0.01,
+    "momentum": 0.9,
+    "weight_decay": 0.0005,
+    "warmup_epochs": 3.0,
+    "warmup_bias_lr": 0.1,
+    "cos_lr": false,
+    "nbs": 64
+  },
+  "primary_checkpoint": "last",
+  "completed_epochs": 10,
+  "best_fitness_epoch": 9,
+  "curve_peak_map50_95_epoch": 9,
+  "curve_peak_map50_95": 0.57883,
+  "curve_last_map50_95": 0.54373,
+  "train_seconds_csv": 611.418,
+  "train_call_wall_seconds": 635.7760217040777,
+  "complexity": {
+    "params": 2534030,
+    "gflops": 6.0568064,
+    "imgsz": 640,
+    "graph": "unfused training model"
+  },
+  "last": {
+    "map50": 0.9440131615794196,
+    "map50_95": 0.5438212219480287,
+    "ap75": 0.5767513639513437,
+    "precision": 0.9478270720594628,
+    "recall": 0.8952603706833997,
+    "speed_ms_per_image": {
+      "preprocess": 0.5971538131532615,
+      "inference": 0.38489426941598565,
+      "loss": 0.00020726117943727123,
+      "postprocess": 0.07103147926459603
+    },
+    "predictions": "/root/autodl-tmp/LLVIP_协议实验_2026-11-26/runs/protocol_10e/rgbt_rgbmean_s43_e10/val_last/predictions.json",
+    "predictions_sha256": "7cac19574e70243314e42868efcf6c60061db2711e1dc3e816057dfe542d5e69",
+    "checkpoint": {
+      "path": "/root/autodl-tmp/LLVIP_协议实验_2026-11-26/runs/protocol_10e/rgbt_rgbmean_s43_e10/weights/last.pt",
+      "size_bytes": 5471471,
+      "sha256": "e8aaf161280ce2c117cf96676d3222b09ca5872170736b3594a6b262536f3aaa"
+    }
+  },
+  "best": {
+    "map50": 0.9447580221020504,
+    "map50_95": 0.5785066239151415,
+    "ap75": 0.6348905012083679,
+    "precision": 0.9515261743212227,
+    "recall": 0.895629939562994,
+    "speed_ms_per_image": {
+      "preprocess": 0.6236098730166503,
+      "inference": 0.3706974717638941,
+      "loss": 0.00020995257859563138,
+      "postprocess": 0.07161939055984166
+    },
+    "predictions": "/root/autodl-tmp/LLVIP_协议实验_2026-11-26/runs/protocol_10e/rgbt_rgbmean_s43_e10/val_best/predictions.json",
+    "predictions_sha256": "307726e7a89395b677484663b8493c8ac66f81d2ce3739704f6f6799dff74d78",
+    "checkpoint": {
+      "path": "/root/autodl-tmp/LLVIP_协议实验_2026-11-26/runs/protocol_10e/rgbt_rgbmean_s43_e10/weights/best.pt",
+      "size_bytes": 5471471,
+      "sha256": "2d4ae8b6ed66b63ba18eeec96cce6c5bc3d1ea04f2d3fd4368a1cc975d6e68fa"
+    }
+  }
+}

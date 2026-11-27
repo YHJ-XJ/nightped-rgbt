@@ -1,0 +1,16 @@
+{
+  "mode": "rgbt",
+  "t_init": "random",
+  "in_channels": 4,
+  "pretrained_channels": 3,
+  "init_state": {
+    "applied": "random",
+    "sha_before": "8c0ad40ea042301d",
+    "sha_after": "6c27c7351e7f4aa9"
+  },
+  "weights_unchanged_since_init": true,
+  "fourth_equals_rgb_mean": false,
+  "fourth_vs_mean_max_abs": 0.962971568107605,
+  "fourth_l2": 2.3465991020202637,
+  "rgb_mean_l2": 3.0148589611053467
+}
